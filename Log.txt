@@ -1,0 +1,27 @@
+starting execute
+b1bbbbbbb
+Curr tape: b1bbbbbbbcurr state: START reading 1 at index 1
+the line at 2 is the correct transition for this input:
+INCREMENTSTART	1	INCREMENTSTART	0	RIGHT
+new state = INCREMENTSTART
+tape head at index 2
+
+Curr tape: b0bbbbbbbcurr state: INCREMENTSTART reading b at index 2
+the line at 3 is the correct transition for this input:
+INCREMENTSTART	b	TOBEGINNING	1	LEFT
+new state = TOBEGINNING
+tape head at index 1
+
+Curr tape: b01bbbbbbcurr state: TOBEGINNING reading 0 at index 1
+the line at 5 is the correct transition for this input:
+TOBEGINNING	0	TOBEGINNING	0	LEFT
+new state = TOBEGINNING
+tape head at index 0
+
+Curr tape: b01bbbbbbcurr state: TOBEGINNING reading b at index 0
+the line at 7 is the correct transition for this input:
+TOBEGINNING	b	INCREMENTFINAL	b	RIGHT
+new state = INCREMENTFINAL
+tape head at index 1
+
+ result: b01bbbbbb

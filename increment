@@ -1,0 +1,5 @@
+#! /bin/bash
+
+make clean
+make
+java turingMachine incrementTransitions.txt $1
